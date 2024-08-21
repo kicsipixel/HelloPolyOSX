@@ -10,11 +10,7 @@
 #import "PolyShape.h"
 
 @interface PolyView : NSView {
-
-
 	IBOutlet PolyShape *myPolyShape;
 }
-
-
 
 @end

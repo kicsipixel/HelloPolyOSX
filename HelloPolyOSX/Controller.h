@@ -11,13 +11,11 @@
 #import "PolyShape.h"
 
 @interface Controller : NSObject {
-	
 	IBOutlet PolyView *view;
 	IBOutlet PolyShape *myPolyShape;
 	IBOutlet id labelNumberOfSides;
 	IBOutlet id labelInternalAngle;
 	IBOutlet id labelNameOfPolygon;
-	
 }
 
 -(IBAction) increaseButton:(id) sender;

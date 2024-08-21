@@ -10,7 +10,6 @@
 
 
 @interface PolyShape : NSObject {
-		
 	int numberOfSides;
 	int minNumberOfSides;
 	int maxNumberOfSides;
@@ -18,17 +17,13 @@
 	float angleInDegree;
 
 	NSString* nameOfPolygon;
-	
 }
 
 @property (nonatomic) int numberOfSides, minNumberOfSides, maxNumberOfSides,increase;
 @property (readonly) float angleInRadian, angleInDegree;
 @property (readonly) NSString *nameOfPolygon;
 
-
 -(NSString*) nameOfPolygon;
 -(int) increase;
-
-
 
 @end

@@ -13,10 +13,7 @@
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-		
-    }
+    if (self) { }
     return self;
 }
 
@@ -24,8 +21,8 @@
 - (void)drawRect:(NSRect)dirtyRect {
     // Drawing code here.
 
-	NSGraphicsContext    *    nsGraphicsContext  = [NSGraphicsContext currentContext];
-	CGContextRef            context        = (CGContextRef) [nsGraphicsContext graphicsPort];
+	NSGraphicsContext * nsGraphicsContext = [NSGraphicsContext currentContext];
+	CGContextRef context = (CGContextRef) [nsGraphicsContext graphicsPort];
 	
 	CGContextTranslateCTM(context, 0, 0);
 	
@@ -37,14 +34,9 @@
 	
 	int i;
 	
-	for(i=0;i< 13;i++)
-		
-	{
-		
-		five[i].x = 150 + 100* sin( i*2*M_PI/myPolyShape.numberOfSides);
-		
-		five[i].y = 150 + 100* cos( i*2*M_PI/myPolyShape.numberOfSides);
-		
+	for(i=0;i< 13;i++) {
+		five[i].x = 150 + 100 * sin( i * 2 * M_PI/myPolyShape.numberOfSides);
+		five[i].y = 150 + 100 * cos( i * 2 * M_PI/myPolyShape.numberOfSides);
 	}
 	
 	CGContextSetLineWidth(context, 3.0);
@@ -52,11 +44,6 @@
 	CGContextSetRGBStrokeColor(context,1,1,1,1.0);
 	CGContextStrokePath(context);
 	CGContextFillPath(context);
-	
-
-	
-	//CGContextSetRGBFillColor(context, 0.7, 0.7, 0.7, 1.0);
-	//CGContextFillRect(context, self.bounds);
 }
 
 @end
